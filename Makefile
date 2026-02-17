@@ -21,7 +21,7 @@ endif
 
 CCFILES := $(wildcard *.cc)
 HHFILES := $(wildcard *.hh)
-OBJS := $(patsubst %.cc,%.o,$(CCFILES))
+OBJS    := $(patsubst %.cc,%.o,$(CCFILES))
 TAR_FILE = mario-pro-2-$(USER)-$(shell date +%s).tgz
 
 mario_pro_2: $(OBJS)
@@ -31,7 +31,7 @@ $(OBJS): $(HHFILES)
 window.o: window.cc geometry.hh fenster.h
 
 tgz: clean
-	tar -czf $(TAR_FILE) Makefile *.cc *.hh fenster.h .vscode .clang-format
+	tar -czf $(TAR_FILE) Makefile *.cc *.hh fenster.h .vscode
 
 clean:
 	rm -f mario_pro_2 $(OBJS)

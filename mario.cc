@@ -1,4 +1,4 @@
-#include "mario.hh"
+#include "Mario.hh"
 #include "utils.hh"
 using namespace std;
 using namespace pro2;
